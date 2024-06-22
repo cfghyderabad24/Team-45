@@ -19,12 +19,14 @@ mongoClient.connect(process.env.DB_URL)
     const studentcollections = JPMC.collection("studentcollections")
     const instructorcollections=JPMC.collection("instructorcollections");
     const instructorreplicatecollections=JPMC.collection("instructorreplicatecollections");
-    const parentcollections=JPMC.collection("parentcollections");
+    const parentcollections=JPMC.collection("parentcollections"); 
+    const admincollections=JPMC.collection("admincollections");
       //share collection obj with exp app
       app.set("studentcollections",studentcollections);
       app.set("instructorcollections",instructorcollections);
       app.set("parentcollections",parentcollections);
       app.set("instructorreplicatecollections",instructorreplicatecollections);
+      app.set("admincollections",admincollections)
       //confirm connection status
       console.log("DB is connected");
   })
@@ -36,10 +38,12 @@ mongoClient.connect(process.env.DB_URL)
 //import api routes
 const instructorApp = require("./APIS/instructorapi")
 const parentApp = require("./APIS/parentapi")
+const adminApp = require("./APIS/adminapi")
 
 //if patr starts with user-api,send request to userApi
 app.use("/instructor-api",instructorApp)
 app.use("/parent-api",parentApp)
+app.use("/admin-api",adminApp)
 
 
 //exp err handler

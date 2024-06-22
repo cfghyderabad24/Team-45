@@ -36,6 +36,7 @@ userApp.post(
       obj.total_sessions=50;
       obj.description;
       obj.chats=[];
+      obj.status=false;
      let k= await parentcollections.insertOne(obj);
 
       await instructorreplicatecollections.updateOne({username:"charan"},{$push:{students:newUser.username}});
@@ -106,6 +107,8 @@ userApp.put('/chat/:username',expressAsyncHandler(async(req,res)=>{
         parentcollections.updateOne({username:username},{$push:{chats:ele}});
     })
 }))
+
+
 
 
 
