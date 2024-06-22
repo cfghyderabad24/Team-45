@@ -1,23 +1,44 @@
 ###
+<<<<<<< HEAD
 POST http://localhost:8000/instructor-api/lo
 +Content-Type:application/json
+=======
+POST http://localhost:8000/parent-api/user
+Content-Type:application/json
+>>>>>>> 61d302906c27599f4dc995729d85d28d2782693c
 
 {
-    "fullname":"ravi",
+    "fullname":"Ravi Teja",
     "age":12,
     "email":"charan@gmail.com",
     "phoneno":9704176019,
-    "username":"charan",
-    "password":"charan"
+    "username":"ravi",
+    "password":"ravi"
 }
 
 
 ###
+<<<<<<< HEAD
 GET http://localhost:8000/parent-api/getinfo/ravi
 
 ###
 PUT http://localhost:8000/instructor-api/attendance
 Content-Type:application/json
+=======
+GET http://localhost:8000/parent-api/getinfo/ravvi
+
+###
+PUT http://localhost:8000/instructor-api/attendance
+Content-Type: application/json
+
+{
+    "usernames":[
+        "ravi"
+    ]
+    
+    
+}
+>>>>>>> 61d302906c27599f4dc995729d85d28d2782693c
 
 {
     "usernames":[

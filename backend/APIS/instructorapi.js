@@ -46,7 +46,7 @@ userApp.post(
   "/login",
   expressAsyncHandler(async (req, res) => {
     let userCredential = req.body;
-    let dbUser = await instructorreplicatecollections.findOne({
+    let dbUser = await instructorcollections.findOne({
       username: userCredential.username,
     });
 
