@@ -1,19 +1,29 @@
 ###
-POST http://localhost:8000/instructor-api/login
+POST http://localhost:8000/parent-api/user
 Content-Type:application/json
 
 {
-    "fullname":"ravi",
+    "fullname":"Ravi Teja",
     "age":12,
     "email":"charan@gmail.com",
     "phoneno":9704176019,
-    "username":"charan",
-    "password":"charan"
+    "username":"ravi",
+    "password":"ravi"
 }
 
 
 ###
 GET http://localhost:8000/parent-api/getinfo/ravvi
 
+###
+PUT http://localhost:8000/instructor-api/attendance
+Content-Type: application/json
 
+{
+    "usernames":[
+        "ravi"
+    ]
+    
+    
+}
 
