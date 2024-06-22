@@ -1,0 +1,19 @@
+###
+POST http://localhost:8000/instructor-api/login
+Content-Type:application/json
+
+{
+    "fullname":"ravi",
+    "age":12,
+    "email":"charan@gmail.com",
+    "phoneno":9704176019,
+    "username":"charan",
+    "password":"charan"
+}
+
+
+###
+GET http://localhost:8000/parent-api/getinfo/ravvi
+
+
+
