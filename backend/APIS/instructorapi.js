@@ -11,6 +11,7 @@ require("dotenv").config();
 userApp.use((req, res, next) => {
   instructorcollections = req.app.get("instructorcollections");
   instructorreplicatecollections = req.app.get("instructorreplicatecollections")
+  parentcollections = req.app.get("parentcollections");
   next();
 });
 
@@ -98,8 +99,19 @@ userApp.get('/getinfo/:username',expressAsyncHandler(async(req,res)=>{
 
 }));
 
+userApp.get('/studentsinfo/:instructor',expressAsyncHandler(async(req,res)=>{
+  let instructor=req.params.instructor;
+  //console.log(instructor);
+  let user=await instructorreplicatecollections.findOne({username:instructor});
+  userobj=user.students;
+  console.log(user)
+  res.send({message:"Sent users",user:userobj})
+  
+
+}))
+
 userApp.put('/attendance', expressAsyncHandler(async (req, res) => {
-    let usernames = req.body; // Array of usernames
+    let {usernames} = req.body; // Array of usernames
 
     // Use a loop to update each username's attendance field by 1
     for (let username of usernames) {
