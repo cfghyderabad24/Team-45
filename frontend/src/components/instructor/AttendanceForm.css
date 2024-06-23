@@ -1,0 +1,67 @@
+.attendance-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attendance-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.attendance-form div {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.attendance-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.attendance-form input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.student-attendance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attendance-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.attendance-form button:hover {
+    background-color: #218838;
+}
+
+.attendance-form button[type="button"] {
+    background-color: #007bff;
+    margin-top: 5px;
+}
+
+.attendance-form button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
