@@ -1,4 +1,6 @@
 ###
+POST http://localhost:8000/instructor-api/lo
++Content-Type:application/json
 POST http://localhost:8000/parent-api/user
 Content-Type:application/json
 
@@ -13,7 +15,15 @@ Content-Type:application/json
 
 
 ###
+GET http://localhost:8000/parent-api/getinfo/ravi
+
+###
+PUT http://localhost:8000/instructor-api/attendance
+Content-Type:application/json
 GET http://localhost:8000/parent-api/getinfo/ravvi
+
+###
+GET http://localhost:8000/instructor-api/studentsinfo/charan
 
 ###
 PUT http://localhost:8000/instructor-api/attendance
@@ -27,3 +37,8 @@ Content-Type: application/json
     
 }
 
+{
+    "usernames":[
+        "ravi","ajay"
+    ]
+}
