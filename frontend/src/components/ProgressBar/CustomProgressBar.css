@@ -1,0 +1,16 @@
+.progress-bar {
+    transition: width 0.6s ease;
+  }
+  
+  .progress-bar.custom-green {
+    background-color: #28a745;
+  }
+  
+  .progress-bar.custom-yellow {
+    background-color: #ffc107;
+  }
+  
+  .progress-bar.custom-red {
+    background-color: #dc3545;
+  }
+  
