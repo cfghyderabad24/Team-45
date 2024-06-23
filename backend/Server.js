@@ -14,7 +14,7 @@ const mongoClient = require("mongodb").MongoClient;
 app.use(exp.json());
 
 
-app.use(exp.static(path.join(__dirname,'../frontend/build')))
+
 
 //connect to database
 mongoClient.connect(process.env.DB_URL)
@@ -53,9 +53,7 @@ app.use("/admin-api",adminApp)
 
 
 
-app.use((req,res,next)=>{
-  res.sendFile(path.join(__dirname,'../frontend/build/index.html'))
-})
+
 
 //exp err handler
 app.use((err, req, res, next) => {

@@ -100,15 +100,6 @@ userApp.get('/getinfo',expressAsyncHandler(async(req,res)=>{
 
 }));
 
-userApp.put('/chat/:username',expressAsyncHandler(async(req,res)=>{
-    let username=req.params.username;
-    let obj = req.body;
-    obj.map((ele)=>{
-        parentcollections.updateOne({username:username},{$push:{chats:ele}});
-    })
-}))
-
-
 
 
 

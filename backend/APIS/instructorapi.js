@@ -99,6 +99,17 @@ userApp.get('/getinfo/:username',expressAsyncHandler(async(req,res)=>{
 
 }));
 
+userApp.get('/studentsinfo/:instructor',expressAsyncHandler(async(req,res)=>{
+  let instructor=req.params.instructor;
+  //console.log(instructor);
+  let user=await instructorreplicatecollections.findOne({username:instructor});
+  userobj=user.students;
+  console.log(user)
+  res.send({message:"Sent users",user:userobj})
+  
+
+}))
+
 userApp.put('/attendance', expressAsyncHandler(async (req, res) => {
     let {usernames} = req.body; // Array of usernames
 
