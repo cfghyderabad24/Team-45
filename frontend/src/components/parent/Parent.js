@@ -29,7 +29,7 @@ function Parent() {
       <div className="container-fluid  justify-content-center">
         <ul className="nav">
           <li className="nav-item">
-            <NavLink className="nav-link" to="first">Main</NavLink>
+            <NavLink className="nav-link" to="first">Home</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="second">Profile</NavLink>

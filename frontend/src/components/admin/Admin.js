@@ -1,8 +1,8 @@
 import React from 'react'
-
+import AdminApproval from './AdminApproval'
 function Admin() {
   return (
-    <div>Admin</div>
+    <AdminApproval/>
   )
 }
 
