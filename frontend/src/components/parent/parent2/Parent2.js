@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Card, Container, Row, Col, ListGroup, Spinner } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import CustomProgressBar from '../../ProgressBar/CustomProgressBar';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function UserDetails() {
   const [user, setUser] = useState(null);

@@ -5,10 +5,11 @@ import Layout from './components/layout/Layout';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Admin from './components/admin/Admin';
-import Instructor from './components/instructor/Instructor';
+import Instructor from './components/instructor/AttendanceForm';
 import Parent from './components/parent/Parent';
 import Parent1 from './components/parent/parent1/Parent1';
 import Parent2 from './components/parent/parent2/Parent2';
+import Donor from './components/donor/PaymentForm';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
         {
           path: 'login',
           element: <Login />
+        },
+        {
+          path: 'donor',
+          element: <Donor />
         },
         {
           path: 'register',
